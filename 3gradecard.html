@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Grades</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .card {
+      transition: all 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 128, 0, 0.3);
+    }
+    .grade-cell {
+      font-weight: 600;
+    }
+    .grade-a { color: #16a34a; }
+    .grade-b { color: #ca8a04; }
+    .grade-c { color: #dc2626; }
+
+    /* Animation */
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInSlide 0.8s ease-out forwards;
+    }
+    @keyframes fadeInSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex flex-col justify-between">
+  <!-- Header -->
+  <header class="bg-green-100 dark:bg-green-800 py-6 text-center shadow-md rounded-b-3xl">
+    <h1 class="text-4xl font-bold">📊 Your Grades</h1>
+    <p class="text-sm opacity-60">Here's an overview of your performance</p>
+  </header>
+
+  <!-- Grades Table -->
+  <main class="flex-grow flex items-center justify-center px-4">
+    <div class="w-full max-w-4xl mt-10 mb-10 rounded-xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700 fade-slide">
+      <table class="min-w-full bg-white dark:bg-gray-800 text-sm">
+        <thead class="bg-green-50 dark:bg-green-900 text-left">
+          <tr>
+            <th class="py-4 px-6 text-sm font-semibold uppercase tracking-wider">Subject</th>
+            <th class="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-center">Grade</th>
+            <th class="py-4 px-6 text-sm font-semibold uppercase tracking-wider">Instructor Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Qur'an</td>
+            <td class="py-4 px-6 text-center grade-cell grade-a">A</td>
+            <td class="py-4 px-6">Excellent recitation and memorization with proper tajwid.</td>
+          </tr>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Fiqh</td>
+            <td class="py-4 px-6 text-center grade-cell grade-a">B+</td>
+            <td class="py-4 px-6">Good understanding of jurisprudential rulings and applications.</td>
+          </tr>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Akhlaq</td>
+            <td class="py-4 px-6 text-center grade-cell grade-b">B</td>
+            <td class="py-4 px-6">Displays good manners; room for improvement in consistency.</td>
+          </tr>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Aqidah</td>
+            <td class="py-4 px-6 text-center grade-cell grade-a">A-</td>
+            <td class="py-4 px-6">Strong grasp of core beliefs and their logical basis.</td>
+          </tr>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Tarikh</td>
+            <td class="py-4 px-6 text-center grade-cell grade-b">B+</td>
+            <td class="py-4 px-6">Good retention of historical events; analytical skills developing.</td>
+          </tr>
+          <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Tajwid</td>
+            <td class="py-4 px-6 text-center grade-cell grade-a">A</td>
+            <td class="py-4 px-6">Precise pronunciation and excellent application of tajwid rules.</td>
+          </tr>
+          <tr class="hover:bg-green-50 dark:hover:bg-green-800 transition-all">
+            <td class="py-4 px-6">Miftahul Qur'an</td>
+            <td class="py-4 px-6 text-center grade-cell grade-a">A</td>
+            <td class="py-4 px-6">Demonstrates strong foundational understanding and fluency.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Back Button -->
+  <footer class="text-center pb-6">
+    <a href="2dashboard.html" class="inline-block mt-4 px-6 py-2 bg-green-600 text-white rounded-full shadow hover:bg-green-700 transition-all">
+      ← Back to Dashboard
+    </a>
+  </footer>
+</body>
+</html>

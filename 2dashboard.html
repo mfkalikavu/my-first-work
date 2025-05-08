@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Student Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+    }
+  </script>
+  <style>
+    html.dark body {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
+    .card {
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0, 128, 0, 0.3);
+      transform: translateY(-6px);
+      border-color: #10b981;
+      background-color: #ecfdf5;
+    }
+    .dark .card:hover {
+      background-color: #064e3b;
+    }
+    .card-description {
+      opacity: 0.4;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #d1fae5, #a7f3d0);
+    }
+    .dark .gradient-bg {
+      background: linear-gradient(to right, #065f46, #047857);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white min-h-screen font-sans">
+  <!-- Toggle Button -->
+  <div class="absolute top-4 right-4">
+    <button onclick="toggleTheme()" class="w-10 h-10 bg-white text-yellow-500 rounded-full flex items-center justify-center shadow hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+      🌙
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="text-center py-12 gradient-bg rounded-b-3xl shadow-md mb-8">
+    <h1 class="text-4xl font-bold mb-2">🎓 Welcome to Your Student Portal</h1>
+    <p class="text-md card-description">Access all your resources from one vibrant place</p>
+  </header>
+
+  <!-- Section Cards -->
+  <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-8 pb-16">
+    <a href="3gradecard.html" class="card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center hover:cursor-pointer">
+      <h2 class="text-xl font-semibold mb-2">📊 View Grades</h2>
+      <p class="text-sm card-description">Check your academic performance</p>
+    </a>
+    <a href="4assignment.html" class="card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center hover:cursor-pointer">
+      <h2 class="text-xl font-semibold mb-2">📝 Assignments</h2>
+      <p class="text-sm card-description">See upcoming and submitted work</p>
+    </a>
+    <a href="5classschedule.html" class="card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center hover:cursor-pointer">
+      <h2 class="text-xl font-semibold mb-2">📅 Class Schedule</h2>
+      <p class="text-sm card-description">Track your daily timetable</p>
+    </a>
+    <a href="6profile.html" class="card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center hover:cursor-pointer">
+      <h2 class="text-xl font-semibold mb-2">👤 Profile Settings</h2>
+      <p class="text-sm card-description">Edit your personal information</p>
+    </a>
+    <a href="7excel.html" class="card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center hover:cursor-pointer">
+      <h2 class="text-xl font-semibold mb-2">📤 Export to Excel</h2>
+      <p class="text-sm card-description">Download your data easily</p>
+    </a>
+      <a href="1login.html" class="card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
+      <h3 class="text-xl font-semibold text-green-600">🔒 Logout</h3>
+      <p class="text-sm text-gray-500 dark:text-gray-300 opacity-60 mt-2">Securely log out from your account</p>
+    </a>
+  </main>
+</body>
+</html>

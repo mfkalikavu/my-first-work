@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class Schedule</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .schedule-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .schedule-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    }
+    .fade-slide {
+      animation: fadeInSlide 0.8s ease-out both;
+    }
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .day-heading {
+      color: #065f46; /* dark green */
+    }
+    .time-zone {
+      font-size: 0.875rem;
+      color: #6b7280; /* gray-500 */
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-green-100 dark:bg-green-800 py-6 text-center shadow-md rounded-b-3xl">
+    <h1 class="text-4xl font-bold">🗓️ Weekly Class Schedule</h1>
+    <p class="text-base text-gray-600 dark:text-gray-300">Organized by days for your convenience</p>
+  </header>
+
+  <!-- Schedule Cards -->
+  <main class="flex-grow px-4 py-10">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <!-- Monday -->
+      <div>
+        <h2 class="text-2xl font-bold day-heading mb-4">Monday</h2>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <!-- Qur'an -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Qur'an</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+          <!-- Aqidah -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Aqidah</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tuesday -->
+      <div>
+        <h2 class="text-2xl font-bold day-heading mb-4">Tuesday</h2>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <!-- Qur'an -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Qur'an</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+          <!-- Tarikh -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Tarikh</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wednesday -->
+      <div>
+        <h2 class="text-2xl font-bold day-heading mb-4">Wednesday</h2>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <!-- Qur'an -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Qur'an</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+          <!-- Fiqh -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Fiqh</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thursday -->
+      <div>
+        <h2 class="text-2xl font-bold day-heading mb-4">Thursday</h2>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <!-- Qur'an -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Qur'an</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+          <!-- Akhlaq -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Akhlaq</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Friday -->
+      <div>
+        <h2 class="text-2xl font-bold day-heading mb-4">Friday</h2>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">
+          <!-- Qur'an -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Qur'an</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+          <!-- Tajwid -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border dark:border-gray-700 schedule-card fade-slide">
+            <h3 class="text-xl font-bold text-green-600 dark:text-green-300">Tajwid</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">8:15 PM - 8:45 PM <span class="time-zone">(Florida Time)</span></p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">5:45 AM - 6:15 AM (India Time)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back Button -->
+  <footer class="text-center pb-6">
+    <a href="2dashboard.html" class="inline-block mt-6 px-6
+::contentReference[oaicite:11]{index=11}
+ 
